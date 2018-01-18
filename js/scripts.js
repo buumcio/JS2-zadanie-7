@@ -84,25 +84,22 @@ function checkRoundWinner(playerPick, computerPick) {
 
     if (playerPick == computerPick) {
         winnerIs = 'noone'; // remis
-        //document.innerHTML = 'REMIS';
+        
     } else if (
         (computerPick == 'rock' &&  playerPick == 'scissors') ||
         (computerPick == 'scissors' &&  playerPick == 'paper') ||
         (computerPick == 'paper' &&  playerPick == 'rock')) {
 
         winnerIs = 'computer';
-        //document.innerText = '';
     }
 
     if (winnerIs == 'player') {
         playerResultElem.innerHTML = "Win!";
         player.score++;
-        //document.innerText = '';
         setGamePoints();
     } else if (winnerIs == 'computer') {
         computerResultElem.innerHTML = "Win!";
         computer.score++;
-        //document.innerText = '';
         setGamePoints();
     }
 
